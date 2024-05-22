@@ -1,0 +1,79 @@
+.create-dialog {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: aliceblue;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* border: solid 1px yellow; */
+ 
+}
+tr{
+  /* border: solid 1px rebeccapurple; */
+}
+td {
+  padding: 8px;
+  /* border: solid 1px black; */
+}
+.date_div{
+  display: flex;
+  align-items: center; /* Vertical alignment */
+}
+
+.right-aligned-label {
+  text-align: right;
+  align-self: baseline;
+}
+
+#button_row {
+  text-align: center;
+  width: 100%;
+}
+button{
+  padding: 5px;
+  margin: 5px;
+  display: inline;
+  text-align: center;
+}
+.cdk-global-overlay-wrapper {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  overflow: auto;
+  pointer-events: auto;  
+}
+@media only screen and (max-width: 600px) {
+  .create-dialog {
+    font-family: Arial, sans-serif;
+    padding: 3px;
+    margin: 3px;
+    background-color: aliceblue;
+    width: 100%;
+  }
+  table {
+    display: block;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  td {
+    display: block;
+    text-align: left;
+  }
+
+  .right-aligned-label {
+    text-align: left;
+  }
+
+  #button_row {
+    text-align: left;
+  }
+
+  input, select {
+    width: 100%;
+  }
+}

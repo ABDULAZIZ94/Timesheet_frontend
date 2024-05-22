@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #ff4081;
+}
+material-button {
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: background-color 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.primary {
+  background-color: #1976d2; /* Material Design primary color */
+}
+
+.accent {
+  background-color: #ff4081; /* Material Design accent color */
+}
+
+.warn {
+  background-color: #ff9800; /* Material Design warning color */
+}
+
+.material-button:hover {
+  filter: brightness(30%);
+}

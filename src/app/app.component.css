@@ -1,0 +1,53 @@
+#search_box{
+    width: 80%;
+}
+#search_div {
+    padding-top: 15px;
+    margin: 0px;
+    display: block;
+    text-align: center;
+    background-color: aliceblue;
+    width: 100%;
+}
+#top_buttons{
+    padding: 5px;
+    margin: 5px;
+    display: block;
+    text-align: center;
+}
+#top_buttons>button{
+    padding: 5px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    #search_box{
+        width: 90%;
+    }
+    #search_div {
+        padding: 15px;
+        margin: 15px;
+        display: inline-block;
+        text-align: center;
+        background-color: aliceblue;
+        width: 100%;
+    }
+    #search_div >div {
+        display: block;
+    }
+    #top_buttons{
+        padding:    5px;
+        margin: 5px;
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+    #top_buttons>button{
+        display: block;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+    }
+
+  }
+  

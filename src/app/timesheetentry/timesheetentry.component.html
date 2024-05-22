@@ -1,0 +1,69 @@
+<div class="create-dialog">
+<h1>Timesheet Entry</h1>
+<table >
+    <tr>
+      <td>
+        <mat-label class="right-aligned-label">Project</mat-label>
+      </td>
+      <td>
+        <input [(ngModel)]="ts.projectname" required>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-label class="right-aligned-label">Task</mat-label>
+      </td>
+      <td>
+        <input [(ngModel)]="ts.task" required>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-label class="right-aligned-label">Date From</mat-label>
+      </td>
+      <td class="date_div">
+        <input matInput [matDatepicker]="pickerFrom" placeholder="Choose a date (mm/dd/yyyy)" [(ngModel)]="ts.datefrom" [min]="minDate" [max]="maxDate">
+        <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+        <mat-datepicker #pickerFrom></mat-datepicker>
+      </td>
+      <td>
+        <mat-label class="right-aligned-label">Date To</mat-label>
+      </td>
+      <td class="date_div">
+        <input matInput [matDatepicker]="pickerTo" placeholder="Choose a date (mm/dd/yyyy)" [(ngModel)]="ts.dateto" [min]="minDate" [max]="maxDate">
+        <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+        <mat-datepicker #pickerTo></mat-datepicker>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-label class="right-aligned-label">Status</mat-label>
+      </td>
+      <td>
+        <select [(ngModel)]="ts.status.id">
+          <option *ngFor="let pair of keyValueStatuses" [value]="pair.id">{{ pair.status }}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-label class="right-aligned-label">Assign To</mat-label>
+      </td>
+      <td>
+        <select [(ngModel)]="ts.assignto.id">
+          <option *ngFor="let pair of keyValueUser" [value]="pair.id">{{ pair.name }}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td id="button_row" colspan="4">
+        <button (click)="saveDataToDb()" >
+          save
+        </button>
+        <button (click)="closeDialog()" >
+          close
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
